@@ -1,0 +1,447 @@
+/*
+    ==============================
+        CONTENT
+    ==============================
+
+    1- Custom Properties
+        1.1- Colors
+        1.2- Paddings
+        1.3- Gaps
+        1.4- Transitions
+        1.5- Font Sizes
+    
+    2- Reset Styles
+        2.1- Box Sizing
+        2.2- Scroll Behavior
+        2.3- Images
+        2.4- Navigation Lists
+        2.5- Links
+
+    3- Utility Classes
+        3.1- No Wrap
+        3.2- For Screen Readers Only
+
+    4- Exrta Small Screens Layout (>0, <576px)
+        4.1- Page Body
+            4.1.1- Fonts
+
+        4.2- Page Header
+            4.2.1- Logo
+            4.2.2- Navigation Menu
+
+        4.3- Page Main
+            4.3.1- Page Main - Header
+            4.3.2- Page Main - Section
+                4.3.2.1- Page Main - Section 1
+                4.3.2.2- Page Main - Section 2
+
+        4.4- Page Footer
+
+    5- Responsive Layout
+        5.1- Medium Screens (>=768, <992)
+            5.1.1- Page Main - Subsection
+
+        5.2- Large Screens (>=992, <1200)
+            5.2.1- Page Main - Section
+            5.2.2- Page Main - Section 1
+
+        5.3- Extra Large Screens (>=1200, <infinity)
+            5.3.1- Page Header
+            5.3.2- Page Main - Header
+
+    6- Dark Mode Color Theme
+        6.1- Colors
+        6.2- Borders
+        6.3- Page Body
+        6.4- Page Main - Section 2
+*/
+
+/*
+    ==============================
+        1- Custom Properties
+    ==============================
+*/
+
+:root {
+    /* 1.1- Colors */
+    --color-100: #e6e6e6;
+    --color-800: #333333;
+    --color-850: #33333380;
+    --color-900: #191919;
+
+    /* 1.2- Paddings */
+    --small-padding: 0.5rem;
+    --normal-padding: calc(var(--small-padding) * 2);
+    --large-padding: calc(var(--normal-padding) * 2);
+    --xl-padding: calc(var(--large-padding) * 2);
+
+    /* 1.3- Gaps */
+    --normal-gap: 1rem;
+    --large-gap: calc(var(--normal-gap) * 2);
+
+    /* 1.4- Transitions */
+    --slow-transition: 0.75s;
+    --normal-transition: 0.25s;
+
+    /* 1.5- Font Sizes */
+    --medium-font-size: 1.5rem;
+    --normal-font-size: 2rem;
+    --large-font-size: calc(var(--normal-font-size) * 2);
+
+    /* 1.6- Borders */
+    --normal-border: 0.25rem solid black;
+}
+
+/*
+    ==============================
+        2- Reset Styles
+    ==============================
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    /* 2.1- Box Sizing */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    /* 2.3- Scroll Behavior */
+    scroll-behavior: smooth;
+}
+
+/* 2.4- Images */
+img {
+    display: block;
+}
+
+/* 2.5- Navigation Lists */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 2.6- Links */
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+/*
+    ==============================
+        3- Utility Classes
+    ==============================
+*/
+
+/* 3.1- No Wrap */
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* 3.2- For Screen Readers Only */
+.screen-readers-only {
+    position: absolute;
+    left: -10000px;
+}
+
+/*
+    ==============================
+        4- Exrta Small Screens Layout (>0, <576px)
+    ==============================
+*/
+
+/*
+    4.1- Page Body
+    --------------------
+*/
+
+body {
+    /* 4.1.1- Fonts */
+    font-family: "Quicksand", sans-serif;
+}
+
+/*
+    4.2- Page Header
+    --------------------
+*/
+
+.header {
+    background-color: var(--color-100);
+}
+
+.header .wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: var(--small-padding);
+    padding-inline: var(--normal-padding);
+}
+
+/* 4.2.1- Logo */
+
+.logo,
+.logo h1 {
+    font-size: var(--normal-font-size);
+    margin-block: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--normal-gap);
+    outline: none;
+}
+
+.logo:hover,
+.logo:focus {
+    rotate: -1deg;
+    transition: var(--normal-transition);
+}
+
+.logo:focus {
+    color: red;
+    transition: var(--slow-transition);
+}
+
+/* 4.2.2- Navigation Menu */
+
+.nav-menu ul {
+    display: flex;
+    gap: var(--normal-gap);
+}
+
+.nav-item:last-child {
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    scale: 1.05;
+    rotate: 5deg;
+    transition: var(--normal-transition);
+}
+
+.nav-item a {
+    outline: none;
+}
+
+.nav-item a:focus {
+    color: red;
+    transition: var(--slow-transition);
+}
+
+/*
+    4.3- Page Main
+    --------------------
+*/
+
+/* 4.3.1- Page Main - Header */
+
+.main__header {
+    color: white;
+    background-color: var(--color-800);
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: right;
+    min-height: calc(100vh - (var(--normal-font-size) + 2 * var(--small-padding)) - 0.3rem);
+    /* Just Centering Content */
+    display: flex;
+    align-items: center;
+}
+
+.main__header .wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: var(--large-gap);
+    padding: var(--large-padding);
+    background-color: var(--color-850);
+    width: 100%;
+}
+
+.main__header h2 {
+    font-size: var(--large-font-size);
+}
+
+.main__header p {
+    font-size: var(--normal-font-size);
+}
+
+/* 4.3.2- Page Main - Section */
+
+.main__section {
+    padding-block: var(--xl-padding);
+    padding-inline: var(--large-padding);
+}
+
+.main__section .wraper {
+    margin-top: var(--large-padding);
+    margin-inline: auto;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--large-gap);
+}
+
+.main__section h3 {
+    font-size: var(--normal-font-size);
+}
+
+.main__subsection {
+    flex: 100%;
+}
+
+.main__subsection svg {
+    font-size: var(--large-font-size);
+}
+
+/* 4.3.2.1- Page Main - Section 1 */
+
+.main__section-1 {
+    background-color: var(--color-100);
+}
+
+.main__section-1 .main__subsection {
+    display: flex;
+    align-items: center;
+    gap: var(--normal-gap);
+}
+
+.main__section-1 .main__subsection:last-child svg {
+    font-size: calc(var(--large-font-size) + 0.575rem);
+}
+
+/* 4.3.2.2- Page Main - Section 2 */
+
+.main__section-2 {
+    text-align: center;
+}
+
+.main__section-2 .main__subsection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--normal-gap);
+}
+
+.main__section-2 svg {
+    width: var(--large-font-size);
+    padding: var(--small-padding);
+    margin-inline: auto;
+    border: var(--normal-border);
+    border-radius: 50%;
+}
+
+/*
+    4.4- Page Footer
+    --------------------
+*/
+
+.footer {
+    text-align: center;
+    background-color: var(--color-100);
+    padding: var(--large-padding);
+}
+
+.back-to-home--btn {
+    color: var(--color-100);
+    background-color: var(--color-900);
+    font-size: var(--normal-font-size);
+    width: var(--xl-padding);
+    height: var(--xl-padding);
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: var(--large-padding);
+    right: var(--large-padding);
+}
+
+.back-to-home--btn:hover {
+    color: var(--color-900);
+    background-color: var(--color-100);
+}
+
+.back-to-home--btn:hover svg {
+    rotate: 360deg;
+    transition: var(--slow-transition);
+}
+
+/*
+    ==============================
+        5- Responsive Layout
+    ==============================
+*/
+
+/*
+    5.1- Medium Screens (>=768, <992)
+    --------------------
+*/
+@media screen and (min-width: 768px) {
+    /* 5.1.1- Page Main - Subsection */
+    .main__subsection {
+        flex: calc(50% - var(--large-gap) / 2);
+    }
+}
+
+/*
+    5.2- Large Screens (>=992, <1200)
+    --------------------
+*/
+@media screen and (min-width: 992px) {
+    /* 5.2.1- Page Main - Section */
+    .main__section .wraper {
+        max-width: 992px;
+    }
+
+    /* 5.2.2- Page Main - Section 1 */
+    .main__section-1 h3 {
+        text-align: center;
+    }
+}
+
+/*
+    5.3- Extra Large Screens (>=1200, <infinity)
+    --------------------
+*/
+@media screen and (min-width: 1200px) {
+    /* 5.3.1- Page Header */
+    /* 5.3.2- Page Main - Header */
+    .header .wraper,
+    .main__header p {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+}
+
+/*
+    ==============================
+        6- Dark Mode Color Theme
+    ==============================
+*/
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* 6.1- Colors */
+        --color-100: #191919;
+        --color-900: #e6e6e6;
+        /* 6.2- Borders */
+        --normal-border: 0.25rem solid white;
+    }
+
+    /* 6.3- Page Body */
+    body {
+        color: white;
+    }
+
+    /* 6.4- Page Main - Section 2 */
+    .main__section-2 {
+        background-color: var(--color-800);
+    }
+}

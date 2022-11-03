@@ -1,0 +1,170 @@
+/*
+    ==============================
+        CONTENT
+    ==============================
+
+    1- Exrta Small Screens Layout (>0, <576px)
+        1.1- Page Main
+            1.1.1- Page Main - Header
+            1.1.2- Page Main - Section
+                1.1.2.1- Page Main - Section 1
+                1.1.2.2- Page Main - Section 2
+
+    2- Responsive Layout
+        2.1- Small Screens (>=576, <768)
+            2.1.1- Page Main - Header
+
+        2.2- Medium Screens (>=768, <992)
+            2.2.1- Page Main - Section 2 - Subsection
+
+        2.3- Large Screens (>=992, <1200)
+            2.3.1 Page Main - Section
+
+        2.4- Extra Large Screens (>=1200, <infinity)
+            2.4.1- Page Main - Header
+
+    3- Dark Mode Color Theme
+        3.1- Page Main - Header
+        3.2- Page Main - Section 2
+*/
+
+/*
+    ==============================
+        1- Exrta Small Screens Layout (>0, <576px)
+    ==============================
+*/
+
+/*
+    1.1- Page Main
+    --------------------
+*/
+
+/* 1.1.1- Page Main - Header */
+
+.about__header {
+    padding-block: var(--xl-padding);
+    padding-inline: var(--large-padding);
+}
+
+.about__header h2 {
+    font-size: var(--large-font-size);
+}
+
+.about__header p {
+    margin-top: var(--large-padding);
+    font-size: var(--medium-font-size);
+}
+
+/* 1.1.2- Page Main - Section */
+
+.about__section .wraper {
+    padding-block: var(--xl-padding);
+    padding-inline: var(--large-padding);
+}
+
+.about__section h3 {
+    font-size: var(--normal-font-size);
+}
+
+.about__section p {
+    margin-top: var(--normal-padding);
+}
+
+/* 1.1.2.1- Page Main - Section 1 */
+
+.about__section-1 {
+    background-color: var(--color-100);
+}
+
+.about__section-1 .about__subsection {
+    margin-top: var(--large-padding);
+}
+
+.about__section-1 .about__subsection:first-child {
+    margin-top: 0;
+}
+
+/* 1.1.2.2- Page Main - Section 2 */
+
+.about__section-2 .wraper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--large-gap);
+}
+
+.about__section-2 svg {
+    font-size: var(--large-font-size);
+}
+
+.about__section-2 .about__subsection {
+    display: flex;
+    gap: var(--normal-gap);
+    align-items: center;
+}
+
+/*
+    ==============================
+        2- Responsive Layout
+    ==============================
+*/
+
+/*
+    2.1- Small Screens (>=576, <768)
+    --------------------
+*/
+@media screen and (min-width: 576px) {
+    /* 2.1.1- Page Main - Header */
+    .about__header p {
+        font-size: var(--normal-font-size);
+    }
+}
+
+/*
+    2.2- Medium Screens (>=768, <992)
+    --------------------
+*/
+@media screen and (min-width: 768px) {
+    /* 2.2.1- Page Main - Section 2 - Subsection */
+    .about__section-2 .about__subsection {
+        flex: calc(50% - var(--normal-gap));
+    }
+}
+
+/*
+    2.3- Large Screens (>=992, <1200)
+    --------------------
+*/
+@media screen and (min-width: 992px) {
+    /* 2.3.1 Page Main - Section */
+    .about__section .wraper {
+        max-width: 992px;
+        margin-inline: auto;
+    }
+}
+
+/*
+    2.4- Extra Large Screens (>=1200, <infinity)
+    --------------------
+*/
+@media screen and (min-width: 1200px) {
+    /* 2.4.1- Page Main - Header */
+    .about__header .wraper {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+}
+
+/*
+    ==============================
+        3- Dark Mode Color Theme
+    ==============================
+*/
+
+@media (prefers-color-scheme: dark) {
+    /* 3.1- Page Main - Header */
+    /* 3.2- Page Main - Section 2 */
+    .about__header,
+    .about__section-2 {
+        background-color: var(--color-800);
+    }
+}

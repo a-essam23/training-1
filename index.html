@@ -1,19 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="styles.css" />
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Document</title>
-        <link rel="stylesheet" href="./styles.css" />
-        <script defer src="./index.js"></script>
+        <!-- FavIcon -->
+        <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" />
+
+        <!-- CSS -->
+        <!-- Normalization -->
+        <link rel="stylesheet" href="./assets/css/normalize8.0.1.css" />
+        <!-- FontAwesome Icons Styles -->
+        <link rel="stylesheet" href="./assets/css/fontawesomefree6.2.0/css/all.css" />
+        <!-- About Page Styles -->
+        <link rel="stylesheet" href="./assets/css/about.css" />
+        <!-- Main Styles -->
+        <link rel="stylesheet" href="./assets/css/mian.css" />
+
+        <!-- JavaScript -->
+        <!-- FontAwesome Icons Script -->
+        <script defer src="./assets/js/fontawesomefree6.2.0/all.js"></script>
+        <!-- Main Script -->
+        <script type="module" src="./assets/js/app.js"></script>
     </head>
     <body>
-        <div>
-            <h1>Training</h1>
-            <input id="input" />
-            <button id="btn">Test</button>
-        </div>
+        <header class="header">
+            <div class="wraper">
+                <a class="logo" href="https://ziad-helal.github.io/Vanilla-Single-Page-Application/">
+                    <i class="fa-brands fa-slack"></i>
+                    <h1>Lorem</h1>
+                </a>
+                <nav class="nav-menu">
+                    <h2 class="screen-readers-only">Navigation Menu</h2>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#">Lorem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Ipsum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" id="aboutBtn">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <header class="main__header">
+                <div class="wraper">
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quia vero aut at sed corrupti incidunt dicta magnam consequatur error.</p>
+                </div>
+            </header>
+            <section class="main__section main__section-1">
+                <h3>Lorem Ipsum</h3>
+                <div class="wraper">
+                    <figure class="main__subsection">
+                        <i class="fa-brands fa-canadian-maple-leaf"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                    <figure class="main__subsection">
+                        <i class="fa-solid fa-volcano"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                    <figure class="main__subsection">
+                        <i class="fa-solid fa-feather"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                    <figure class="main__subsection">
+                        <i class="fa-solid fa-clover"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="main__section main__section-2">
+                <h3>Lorem Ipsum</h3>
+                <div class="wraper">
+                    <figure class="main__subsection">
+                        <i class="fa-solid fa-locust"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                    <figure class="main__subsection">
+                        <i class="fa-solid fa-mosquito"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                    <figure class="main__subsection">
+                        <i class="fa-solid fa-spider"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                    <figure class="main__subsection">
+                        <i class="fa-solid fa-bug"></i>
+                        <figcaption>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit fugit non neque, necessitatibus excepturi quisquam soluta veniam ab doloremque possimus.</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <footer id="pageFooter" class="footer">
+            <p id="copyRights">&copy 2022</p>
+        </footer>
     </body>
 </html>
